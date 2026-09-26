@@ -1,0 +1,31 @@
+BROADCAST TIKTOK v2.1 — YEIPI SERVICES
+======================================
+
+Diseño vertical 1080 x 1920 con hilos de luz blanca:
+  · Arriba: la cámara (más pequeña que el juego), 16:9 entera.
+  · Abajo: el gameplay en 16:9, entero, sin recortar nada del HUD.
+  · Debajo del juego: logo YS, YEIPI SERVICES y discord.gg/yeipiservices.
+
+ARCHIVOS
+  overlay.png       Capa que va encima de todo (los huecos son transparentes).
+  vista-previa.png  Cómo queda con cámara y juego de ejemplo.
+
+MONTAJE EN OBS
+  1. Ajustes > Vídeo: resolución base y de salida 1080x1920.
+  2. Añade la cámara (Dispositivo de captura de vídeo).
+     Clic derecho > Transformar > Editar transformación (Ctrl+E):
+       Posición X=156  Y=150   ·   Tamaño 768 x 432
+  3. Añade el juego (Captura de juego o de pantalla), Ctrl+E:
+       Posición X=20  Y=660   ·   Tamaño 1040 x 585
+  4. Añade una fuente Imagen con overlay.png en X=0 Y=0.
+     Súbela arriba del todo en la lista de fuentes.
+
+NOTAS
+  · Cámara y juego tienen que ser 16:9 (1920x1080, 1280x720…) para que
+    encajen sin recortar. Si tu cámara es 4:3, en Ctrl+E pon el tipo de
+    caja delimitadora en «Escalar al interior de los límites» con el
+    tamaño de arriba: sale entera con dos bandas oscuras a los lados.
+  · En el directo, el chat de TikTok tapa la parte baja de la pantalla
+    cuando hay comentarios; por eso todo va lo más arriba posible.
+
+Generado con generar.js (npm run generar).

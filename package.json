@@ -1,0 +1,13 @@
+{
+  "name": "broadcast-yeipiservices",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Generador del overlay vertical (TikTok LIVE) de Yeipi Services: cámara arriba, gameplay 16:9 sin recortar abajo y marca Yeipi.",
+  "type": "module",
+  "scripts": {
+    "generar": "node generar.js"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}
