@@ -1,14 +1,19 @@
-BROADCAST TIKTOK v2.1 — YEIPI SERVICES
+BROADCAST TIKTOK v2.2 — YEIPI SERVICES
 ======================================
 
-Diseño vertical 1080 x 1920 con hilos de luz blanca:
+Diseño vertical 1080 x 1920, fondo oscuro con hilos de luz blanca:
   · Arriba: la cámara (más pequeña que el juego), 16:9 entera.
   · Abajo: el gameplay en 16:9, entero, sin recortar nada del HUD.
   · Debajo del juego: logo YS, YEIPI SERVICES y discord.gg/yeipiservices.
 
 ARCHIVOS
-  overlay.png       Capa que va encima de todo (los huecos son transparentes).
-  vista-previa.png  Cómo queda con cámara y juego de ejemplo.
+  overlay-animado.webm       Overlay en bucle de 8 s (hilos que se mueven, destellos
+                             que recorren los marcos y un brillo que pasa por la marca).
+                             Los huecos son transparentes.
+  overlay.png                El mismo overlay quieto, por si prefieres imagen fija.
+  vista-previa-animada.mp4   Cómo queda en movimiento con cámara y juego de ejemplo.
+  vista-previa-animada.gif   Lo mismo en pequeño, para verlo rápido.
+  vista-previa.png           Vista previa quieta.
 
 MONTAJE EN OBS
   1. Ajustes > Vídeo: resolución base y de salida 1080x1920.
@@ -17,8 +22,12 @@ MONTAJE EN OBS
        Posición X=156  Y=150   ·   Tamaño 768 x 432
   3. Añade el juego (Captura de juego o de pantalla), Ctrl+E:
        Posición X=20  Y=660   ·   Tamaño 1040 x 585
-  4. Añade una fuente Imagen con overlay.png en X=0 Y=0.
-     Súbela arriba del todo en la lista de fuentes.
+  4. Overlay animado: añade una «Fuente multimedia» con overlay-animado.webm.
+       · Marca «Bucle».
+       · DESMARCA «Usar decodificación por hardware cuando esté disponible»:
+         con ella activada la transparencia sale en negro y tapa cámara y juego.
+       · Colócala en X=0 Y=0 y súbela arriba del todo en la lista de fuentes.
+     (Si prefieres el overlay quieto, usa una fuente Imagen con overlay.png.)
 
 NOTAS
   · Cámara y juego tienen que ser 16:9 (1920x1080, 1280x720…) para que
@@ -28,4 +37,4 @@ NOTAS
   · En el directo, el chat de TikTok tapa la parte baja de la pantalla
     cuando hay comentarios; por eso todo va lo más arriba posible.
 
-Generado con generar.js (npm run generar).
+Generado con generar.js y animar.js (npm run generar / npm run animar).
